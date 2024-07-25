@@ -1,0 +1,128 @@
+
+  footer {
+    background-color: #333;
+    color: #fff;
+    padding: 40px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .column img {
+    height: 150px;
+}  
+  .column {
+    flex: 1;
+    margin-right: 20px;
+  }
+  
+  .column:last-child {
+    margin-right: 0;
+  }
+  
+  .column h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  ul li {
+    margin-bottom: 5px;
+  }
+  
+  .social-buttons {
+    display: flex;
+  }
+  
+  .social-buttons a {
+    color: #fff;
+    background-color: #000000;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+  }
+  
+  .social-buttons a:last-child {
+    margin-right: 0;
+  }
+  
+  .social-buttons i {
+    font-size: 20px;
+  }
+
+  .social-buttons img {
+    height: 45px;
+   
+}
+/* Estilos de la sección footer */
+footer {
+    background-color: #000000;
+    color: #ffffff;
+    padding: 50px;
+  }
+  
+  /* Estilos de las columnas */
+  .footer-col {
+    width: 25%;
+    padding: 0 20px;
+    box-sizing: border-box;
+    float: left;
+  }
+  
+  /* Estilos del logo de la empresa */
+  .footer-col-1 img {
+    width: 100px;
+    margin-bottom: 20px;
+  }
+  
+  /* Estilos de las listas de servicios y pestañas legales */
+  .footer-col-2 ul,
+  .footer-col-3 ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .footer-col-2 li,
+  .footer-col-3 li {
+    margin-bottom: 10px;
+  }
+  
+  .footer-col-2 a,
+  .footer-col-3 a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 14px;
+  }
+  
+  /* Estilos de los botones de redes sociales */
+  .footer-col-4 i {
+    font-size: 24px;
+    margin-right: 10px;
+    color: #ffffff;
+  }
+  
+  .footer-col-4 .social-btn {
+    display: inline-block;
+    background-color: #0084b4;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    margin-right: 10px;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  .footer-col-4 .social-btn:hover {
+    background-color: #000000;
+  }
+            

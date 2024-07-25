@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego de promociones</title>
+    <style>
+        /* Estilos CSS para la página */
+        /* Estilos generales */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url(img/n3.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px;
+            text-align: center;
+            background-color: rgba(255, 255, 255, 0.8);
+        }
+
+        h1 {
+            font-size: 32px;
+            color: #333333;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 18px;
+            color: #555555;
+            margin-bottom: 10px;
+        }
+
+        a {
+            color: #FFC107;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+header {
+  background-color: transparent;
+  padding: 20px;
+  text-align: center;
+}
+
+h1 {
+  color: #333;
+  margin: 0;
+}
+
+main {
+  padding: 20px;
+}
+
+section {
+  margin-bottom: 30px;
+}
+
+h2 {
+  color: #333;
+}
+
+ol {
+  padding-left: 20px;
+}
+
+ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+button {
+  background-color: #4caf50;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+#resultado {
+  margin-top: 20px;
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+}
+
+/* Estilos específicos del juego */
+#juego {
+  border: 1px solid #ccc;
+  padding: 20px;
+  background-color: #f9f9f9;
+}
+
+#juego p {
+  margin-bottom: 10px;
+}
+
+#premios {
+  border: 1px solid #ccc;
+  padding: 20px;
+  background-color: transparent;
+}
+
+#premios ul {
+  margin: 0;
+  padding: 0;
+}
+
+#premios li {
+  margin-bottom: 10px;
+}
+
+#resultado {
+  font-weight: bold;
+  margin-top: 10px;
+}
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 40px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .column img {
+    height: 150px;
+}  
+  .column {
+    flex: 1;
+    margin-right: 20px;
+  }
+  
+  .column:last-child {
+    margin-right: 0;
+  }
+  
+  .column h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  ul li {
+    margin-bottom: 5px;
+  }
+  
+  .social-buttons {
+    display: flex;
+  }
+  
+  .social-buttons a {
+    color: #fff;
+    background-color: #000000;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+  }
+  
+  .social-buttons a:last-child {
+    margin-right: 0;
+  }
+  
+  .social-buttons i {
+    font-size: 20px;
+  }
+
+  .social-buttons img {
+    height: 45px;
+   
+}
+/* Estilos de la sección footer */
+footer {
+    background-color: #000000;
+    color: #ffffff;
+    padding: 50px;
+  }
+  
+  /* Estilos de las columnas */
+  .footer-col {
+    width: 25%;
+    padding: 0 20px;
+    box-sizing: border-box;
+    float: left;
+  }
+  
+  /* Estilos del logo de la empresa */
+  .footer-col-1 img {
+    width: 100px;
+    margin-bottom: 20px;
+  }
+  
+  /* Estilos de las listas de servicios y pestañas legales */
+  .footer-col-2 ul,
+  .footer-col-3 ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .footer-col-2 li,
+  .footer-col-3 li {
+    margin-bottom: 10px;
+  }
+  
+  .footer-col-2 a,
+  .footer-col-3 a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 14px;
+  }
+  
+  /* Estilos de los botones de redes sociales */
+  .footer-col-4 i {
+    font-size: 24px;
+    margin-right: 10px;
+    color: #ffffff;
+  }
+  
+  .footer-col-4 .social-btn {
+    display: inline-block;
+    background-color: #0084b4;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    margin-right: 10px;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  .footer-col-4 .social-btn:hover {
+    background-color: #000000;
+  }
+
+  /* Estilos CSS para el menú */
+  .dropdown {
+          position: relative;
+          display: inline-block;
+        }
+        
+        .dropdown-content {
+          display: none;
+          position: absolute;
+          background-color: #f9f9f9;
+          min-width: 160px;
+          box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+          z-index: 1;
+        }
+        
+        .dropdown:hover .dropdown-content {
+          display: block;
+        }
+        
+        .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+    
+    .dropdown .dropbtn {
+      background-color: transparent;
+      color: white;
+      padding: 10px 20px;
+      font-size: 16px;
+      border: none;
+      cursor: pointer;
+    }
+    
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: black;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      z-index: 1;
+    }
+    
+    .dropdown-content a {
+      color: white;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+    }
+    
+    .dropdown-content a:hover {
+      background-color: #ddd;
+    }
+    
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+        /* ... */
+    </style>
+     
+</head>
+<body>
+  
+    <div class="container-fluid p-0 nav-bar">
+        <nav class="navbar navbar-expand-lg bg-none navbar-dark py-3">
+            <a href="index4.html" class="navbar-brand px-lg-4 m-0">
+                <header>
+                    <img src="img/cecylocoshome.png" width="325" height="125" alt="Logo de la página">
+                  </header>
+            </a>
+            
+                
+    <header>
+        <h1>Cecylocos te reta</h1>
+    </header>
+
+    <main>
+        <section id="juego">
+            <h2>Juega y gana premios</h2>
+            <p>¡Bienvenido/a al juego de promociones de Cecylocos! Para participar, contesta las preguntas correctamente a continuación:</p>
+
+            <ol>
+                <li>¿Cuando se fundo nuetra empresa?</li>
+                <ul>
+                    <li>
+                        <input type="radio1" name="opcion" value=""> 
+                    </li>
+                    
+                    </li>
+                </ul>
+            </ol>
+            
+
+            <ol>
+                <li>¿Como se llaman los fundadores?</li>
+                <ul>
+                    <li>
+                        <input type="radio2" name="opcion" value="">
+                    </li>
+                    </li>
+                </ul>
+              </ol>
+              <ol>
+                <li>¿Cual es nuestro producto principal?</li>
+                <ul>
+                    <li>
+                        <input type="radio3" name="opcion" value="">
+                    </li>
+                  
+                </ul>
+                <li>
+                    Haz clic en el botón "Jugar" para descubrir si ganaste un premio.
+                </li>
+            </ol>
+
+            <a href="premio.html" class="nav-item nav-link">Jugar</a>
+
+            <div id="resultado"></div>
+        </section>
+
+        <section id="premios">
+            <h2>Lista de premios</h2>
+            <ul>
+                <li>Un cupon del 10% de descuento.</li>
+                
+            </ul>
+        </section>
+    </main>
+<footer><div class="column">
+    <img src="img/cecylocoshome.png" alt="Logo de la empresa">
+  </div>
+  <div class="column">
+    <h3>Nuestros servicios</h3>
+    <ul>
+      <li>Diseños personalizados</li>
+      <li>envios internacionales</li>
+      <li>Servicio al cliente</li>
+      <li>Branding offline</li>
+    </ul>
+  </div>
+  <div class="column">
+    <h3>Pestañas legales</h3>
+    <ul>
+      <li>Política de privacidad</li>
+      <li>Términos y condiciones</li>
+      <li>Aviso legal</li>
+      <li>Cookies</li>
+    </ul>
+  </div>
+  <div class="column">
+    <h3>Síguenos en redes sociales</h3>
+    <div class="social-buttons">
+      <a href="https://www.facebook.com/Clothing-Store-106440315744948/"><img src="img/Facebooklogo.png"><i class="fab fa-facebook"></i></a>
+      <a href="https://twitter.com/ClothingSt94923?t=DcoTCIE8-iIQlvBEuF5goQ&s=09"><img src="img/Twitterlogo.png"><i class="fab fa-twitter"></i></a>
+      <a href="https://instagram.com/cloth.ingstore88?igshid=ZDdkNTZiNTM="><img src="img/Instagramlogo.png"><i class="fab fa-instagram"></i></a>
+      <a href="https://youtube.com/@ClothingStore-zz6zf"><img src="img/Youtubelogo.png"><i class="fab fa-youtube"></i></a>
+    </div>
+  </div>
+</footer>
+    
+
+    <script>
+        // Lógica del juego
+        const btnJugar = document.getElementById('btn-jugar');
+        const resultado = document.getElementById('resultado');
+
+        btnJugar.addEventListener('click', () => {
+            const opciones = document.getElementsByName('opcion');
+            let opcionSeleccionada = '';
+
+            for (const opcion of opciones) {
+                if (opcion.checked) {
+                    opcionSeleccionada = opcion.value;
+                    break;
+                }
+            }
+
+            if (opcionSeleccionada === '') {
+                resultado.innerHTML = 'Por favor, selecciona una opción antes de jugar.';
+            } else {
+                // Lógica para determinar si ganó un premio
+                // Puedes personalizar esta lógica según tus necesidades
+                const ganador = Math.random() < 0.5; // Ejemplo aleatorio de probabilidad del 50%
+
+                if (ganador) {
+                    resultado.innerHTML = '¡Felicidades! Ganaste un premio. Ponte en contacto con nosotros para reclamarlo

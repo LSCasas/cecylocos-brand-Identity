@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Cotizador de productos</title>
+  <style>
+     body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url(img/n3.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px;
+            text-align: center;
+            background-color: rgba(255, 255, 255, 0.8);
+        }
+
+        h1 {
+            font-size: 32px;
+            color: #333333;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 18px;
+            color: #555555;
+            margin-bottom: 10px;
+        }
+
+        a {
+            color: #FFC107;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+    h1 {
+      text-align: center;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background-color: #fff;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      margin-bottom: 20px;
+    }
+
+    th, td {
+      padding: 10px;
+      text-align: center;
+    }
+
+    th {
+      background-color: #333;
+      color: #fff;
+    }
+
+    tr:nth-child(even) {
+      background-color: #f2f2f2;
+    }
+
+    .product-image {
+      max-width: 100px;
+      max-height: 100px;
+    }
+
+    .quantity-input {
+      width: 50px;
+      text-align: center;
+    }
+
+    .add-button {
+      display: inline-block;
+      background-color: #4caf50;
+      color: #fff;
+      border: none;
+      padding: 5px 10px;
+      margin-top: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .add-button:hover {
+      background-color: #45a049;
+    }
+
+    .calculator {
+      text-align: right;
+      margin-top: 10px;
+    }
+
+    .total-price {
+      font-weight: bold;
+    }
+
+    .buy-button {
+      display: block;
+      width: 100%;
+      background-color: #4caf50;
+      color: #fff;
+      border: none;
+      padding: 10px;
+      text-align: center;
+      text-decoration: none;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .buy-button:hover {
+      background-color: #45a049;
+    }
+    body {
+            text-align: center;
+            background-color: #F4F4F4;
+            padding-top: 50px;
+        }
+
+.center-image {
+display: flex;
+justify-content: center;
+}
+  </style>
+ <link href="style.css" rel="stylesheet">
+  <script>
+    function addToCart(productName, price) {
+      // Aquí puedes implementar la lógica para agregar el producto al carrito
+      console.log('Producto agregado: ' + productName + ' - Precio: ' + price);
+    }
+
+    function calculateTotal() {
+      var quantityInputs = document.getElementsByClassName('quantity');
+      var total = 0;
+
+      for (var i = 0; i < quantityInputs.length; i++) {
+        var quantity = parseInt(quantityInputs[i].value);
+        var price = parseFloat(quantityInputs[i].getAttribute('data-price'));
+        total += quantity * price;
+      }
+
+      document.getElementById('totalPrice').textContent = 'Total: $' + total.toFixed(2);
+    }
+  </script>
+</head>
+<body>
+    <header>
+        <div class="center-image">
+        <a href="index4.html" class="navbar-brand px-lg-4 m-0">
+                        <header>
+                            <img src="img/cecylocoshome.png" width="325" height="125" alt="Logo de la página">
+                          </header>
+                    </a>
+        
+        </div>
+        </header>
+  <h1>Cotizador de productos</h1>
+
+  <table>
+    <tr>
+      <th>Producto</th>
+      <th>Imagen</th>
+      <th>Precio</th>
+      <th>Cantidad</th>
+      <th>Agregar al carrito</th>
+    </tr>
+    <tr>
+      <td>Hoja mebretada</td>
+      <td><img src="img/hoja.png" alt="Producto 1" class="product-image"></td>
+      <td>$10.00</td>
+      <td><input type="number" class="quantity" data-price="10.00" min="0" max="10" value="0"></td>
+      <td><button onclick="addToCart('Producto 1', 10.00)">Agregar</button></td>
+    </tr>
+    <tr>
+      <td>Folder</td>
+      <td><img src="img/folder.png" alt="Producto 2" class="product-image"></td>
+      <td>$15.00</td>
+      <td><input type="number" class="quantity" data-price="15.00" min="0" max="10" value="0"></td>
+      <td><button onclick="addToCart('Producto 2', 15.00)">Agregar</button></td>
+    </tr>
+    <tr>
+      <td>Boligrafo</td>
+      <td><img src="img/boligrafo.png" alt="Producto 3" class="product-image"></td>
+      <td>$20.00</td>
+      <td><input type="number" class="quantity" data-price="20.00" min="0" max="10" value="0"></td>
+      <td><button onclick="addToCart('Producto 3', 20.00)">Agregar</button></td>
+    </tr>
+
+    <tr>
+        <td>Taza</td>
+        <td><img src="img/taza.png" alt="Producto 3" class="product-image"></td>
+        <td>$20.00</td>
+        <td><input type="number" class="quantity" data-price="20.00" min="0" max="10" value="0"></td>
+        <td><button onclick="addToCart('Producto 3', 20.00)">Agregar</button></td>
+      </tr>
+
+      <tr>
+        <td>Credencial Corporativa</td>
+        <td><img src="img/credencial.png" alt="Producto 3" class="product-image"></td>
+        <td>$15.00</td>
+        <td><input type="number" class="quantity" data-price="15.00" min="0" max="10" value="0"></td>
+        <td><button onclick="addToCart('Producto 3', 15.00)">Agregar</button></td>
+      </tr>
+      <tr>
+        <td>Trajeta de presentación </td>
+        <td><img src="img/tarjeta.png" alt="Producto 3" class="product-image"></td>
+        <td>$28.00</td>
+        <td><input type="number" class="quantity" data-price="28.00" min="0" max="10" value="0"></td>
+        <td><button onclick="addToCart('Producto 3', 28.00)">Agregar</button></td>
+      </tr>
+      <tr>
+        <td>Playera</td>
+        <td><img src="img/playera.png" alt="Producto 3" class="product-image"></td>
+        <td>$60.00</td>
+        <td><input type="number" class="quantity" data-price="60.00" min="0" max="10" value="0"></td>
+        <td><button onclick="addToCart('Producto 3', 60.00)">Agregar</button></td>
+      </tr>
+      <tr>
+        <td>Boton</td>
+        <td><img src="img/boton.png" alt="Producto 3" class="product-image"></td>
+        <td>$5.00</td>
+        <td><input type="number" class="quantity" data-price="5.00" min="0" max="10" value="0"></td>
+        <td><button onclick="addToCart('Producto 3', 5.00)">Agregar</button></td>
+      </tr>
+      <tr>
+        <td>Bolsa</td>
+        <td><img src="img/bolsa.png" alt="Producto 3" class="product-image"></td>
+        <td>$25.00</td>
+        <td><input type="number" class="quantity" data-price="25.00" min="0" max="10" value="0"></td>
+        <td><button onclick="addToCart('Producto 3', 25.00)">Agregar</button></td>
+      </tr>
+      <tr>
+        <td>Cuaderno</td>
+        <td><img src="img/cuaderno.png" alt="Producto 3" class="product-image"></td>
+        <td>$30.00</td>
+        <td><input type="number" class="quantity" data-price="30.00" min="0" max="10" value="0"></td>
+        <td><button onclick="addToCart('Producto 3', 30.00)">Agregar</button></td>
+      </tr>
+  </table>
+
+  <div class="calculator">
+    <button onclick="calculateTotal()">Calcular total</button>
+    <span id="totalPrice">Total: $0.00</span>
+  </div>
+
+  <div>
+    <a href="compra.html" class="buy-button">Comprar</a>
+
+
+        <footer>
+            <div class="column">
+              <img src="img/cecylocoshome.png" alt="Logo de la empresa">
+            </div>
+            <div class="column">
+              <h3>Nuestros servicios</h3>
+              <ul>
+                <li>Diseños personalizados</li>
+                <li>envios internacionales</li>
+                <li>Servicio al cliente</li>
+                <li>Branding offline</li>
+              </ul>
+            </div>
+            <div class="column">
+              <h3>Pestañas legales</h3>
+              <ul>
+                <li>Política de privacidad</li>
+                <li>Términos y condiciones</li>
+                <li>Aviso legal</li>
+                <li>Cookies</li>
+              </ul>
+            </div>
+            <div class="column">
+              <h3>Síguenos en redes sociales</h3>
+              <div class="social-buttons">
+                <a href="https://www.facebook.com/Clothing-Store-106440315744948/"><img src="img/Facebooklogo.png"><i class="fab fa-facebook"></i></a>
+          <a href="https://twitter.com/ClothingSt94923?t=DcoTCIE8-iIQlvBEuF5goQ&s=09"><img src="img/Twitterlogo.png"><i class="fab fa-twitter"></i></a>
+          <a href="https://instagram.com/cloth.ingstore88?igshid=ZDdkNTZiNTM="><img src="img/Instagramlogo.png"><i class="fab fa-instagram"></i></a>
+          <a href="https://youtube.com/@ClothingStore-zz6zf"><img src="img/Youtubelogo.png"><i class="fab fa-youtube"></i></a>
+              </div>
+            </div>
+          </footer>   
+        </body>
+
+        </html>
